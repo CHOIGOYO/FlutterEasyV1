@@ -48,7 +48,7 @@ class Mypage1 extends StatelessWidget{
               },
               decoration: BoxDecoration(
                 color: Colors.red[200],
-                borderRadius: BorderRadius.only(
+                borderRadius: BorderRadius.only( //  박스의 모서리를 변경하기위해 사용되었고, only를 사용하면 왼쪽과 오른쪽을 개별적으로 설정할 수 있다.
                   bottomLeft: Radius.circular(40.0),
                   bottomRight: Radius.circular(40.0)
                 )
