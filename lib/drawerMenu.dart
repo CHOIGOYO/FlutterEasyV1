@@ -36,11 +36,21 @@ class Mypage1 extends StatelessWidget{
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
-            UserAccountsDrawerHeader(
+            UserAccountsDrawerHeader( // 계정
               currentAccountPicture: CircleAvatar(
                 backgroundImage: AssetImage('assets/cc2.png'),
                 backgroundColor: Colors.white,
               ),
+              otherAccountsPictures: [ // 다른 계정
+                CircleAvatar(
+                  backgroundImage: AssetImage('assets/poo.jpeg'),
+                  backgroundColor: Colors.white,
+                ),
+                // CircleAvatar(
+                //   backgroundImage: AssetImage('assets/poo.jpeg'),
+                //   backgroundColor: Colors.white,
+                // )
+              ],
               accountName: Text('choigoyo'),
               accountEmail: Text('choigoyo.q7@gmail.com'),
               onDetailsPressed: (){
@@ -53,13 +63,37 @@ class Mypage1 extends StatelessWidget{
                   bottomRight: Radius.circular(40.0)
                 )
               ),
-            )
+            ),
+            ListTile(
+              leading: Icon(Icons.home, // 좌측 아이콘
+              color: Colors.grey[850],),
+              title: Text('Home'),
+              onTap: (){
+                print('Home is clicked');
+              },
+              trailing: Icon(Icons.add), // 우측에 아이콘
+            ),
+            ListTile(
+              leading: Icon(Icons.settings, // 좌측 아이콘
+                color: Colors.grey[850],),
+              title: Text('settings'),
+              onTap: (){
+                print('settings is clicked');
+              },
+              trailing: Icon(Icons.add), // 우측에 아이콘
+            ),
+            ListTile(
+              leading: Icon(Icons.question_answer, // 좌측 아이콘
+                color: Colors.grey[850],),
+              title: Text('QnA'),
+              onTap: (){
+                print('Qna is clicked');
+              },
+              trailing: Icon(Icons.add), // 우측에 아이콘
+            ),
           ],
         ),
       ),
     );
   }
 }
-/*
-* 
-* */
