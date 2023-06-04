@@ -25,16 +25,20 @@ class MyHomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('First App'), // 앱 내에 appbar의 타이틀로 보여지는 텍스트
+        title: Text('My App'), // App Bar의 표시되는 타이틀
+        centerTitle: true, // 타이틀 중앙 정렬
+        backgroundColor: Colors.redAccent, // App Bar의 색상 지정
+        elevation: 0.0, // App Bar 높이 지정(그림자 사라짐)
       ),
-      body: Center( // 중앙 배치
-        child: Column( // 세로 배치
-          children: [ // [] 내에 세로로 배치될 내용을 넣어주면 된다.
-            Text('hello'), // 위젯 간 구분을 위해 쉼표를 넣어줘야한다.
-            Text('hello'),
-            Text('hello')
-          ],
-        ),
+      body: Center( // 컬럼 위젯을 가로축으로 정렬 하려면 Center 위젯이 필요하고, 세로축으로 정렬 하려면 mainAxisAlignment 이 필요하다.
+        child: Column(
+            // mainAxisAlignment: MainAxisAlignment.center, // 컬럼은 세로 정렬만 하지만 mainAxisAlignment 은 앱 스크린 내에서 세로축으로 상단 하단등을 정렬할 때 쓰인다.
+            children: [
+              Text('Hello'),
+              Text('Hello'),
+              Text('Hello'),
+            ],
+          ),
       ),
     );
   }
