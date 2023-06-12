@@ -22,6 +22,7 @@ class MyPage123 extends StatelessWidget {
       backgroundColor: Colors.blue,
       body: Container(
         color: Colors.red, // containers with no children try to be as big as possible
+        child: Text('hello'), //
       ),
     );
   }
