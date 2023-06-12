@@ -1,31 +1,52 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart/';
+import 'package:fluttertoast/fluttertoast.dart';
 
-void main()=>runApp(ToastMSGApp());
+void main()=>runApp(ToastMSG());
 
-class ToastMSGApp extends StatelessWidget{
+class ToastMSG extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'ToastMSG',
       debugShowCheckedModeBanner: false,
-      title: 'ToastMessage',
       theme: ThemeData(
-        primarySwatch: Colors.blue
+        primarySwatch: Colors.green
       ),
-      home: MyToastMessage(),
+      home: MyToastMSG(),
     );
   }
 }
 
-class MyToastMessage extends StatelessWidget{
+class MyToastMSG extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Toast Message'),
+        title: Text('toast message'),
         centerTitle: true,
       ),
-      body: Center(),
+      body: Center(
+        child: TextButton(
+          style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(Colors.greenAccent) // 버튼 배경
+          ),
+          onPressed: () {
+            // 버튼을 눌렀을 때 실행될 코드
+            flutterToast();
+          },
+          child: Text('Toast'),
+        ),
+      ),
     );
   }
+}
+void flutterToast(){
+  Fluttertoast.showToast(msg: 'hello flutter',
+  gravity: ToastGravity.BOTTOM,
+    backgroundColor: Colors.redAccent,
+    fontSize: 20.0, // msg 폰트크기
+    textColor: Colors.white,
+    toastLength: Toast.LENGTH_SHORT ,
+  );
+
 }
