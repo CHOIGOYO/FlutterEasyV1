@@ -36,6 +36,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   fluttertoast: ^8.2.2
+  introduction_screen: ^3.1.8
 
 dev_dependencies:
   flutter_test:
@@ -64,6 +65,10 @@ flutter:
     - assets/cc.gif
     - assets/cc2.png
     - assets/poo.jpeg
+    - image/free-icon-fox-3969784.png
+    - image/free-icon-lion-3969803.png
+    - image/free-icon-pig-3969799.png
+    - image/free-icon-sheep-3969801.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
